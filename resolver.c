@@ -91,9 +91,15 @@ bool resolve(int row, int col, int board[9][9]) {
 void printBoard(int board[9][9]){
     printf("\n\n************ SOLUTION ************\n\n");
     for(int i = 0; i < 9; i++){
+
+        if(i > 0 && i % 3 == 0) printf("---------------------\n");
+
         for(int j = 0; j < 9; j++) {
-            printf("%d", board[i][j]);
+            if(j > 0 && j % 3 == 0) printf("| ");
+
+            printf("%d ", board[i][j]);
         }
+        
         printf("\n");
     }
 
