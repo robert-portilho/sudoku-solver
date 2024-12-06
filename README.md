@@ -5,6 +5,16 @@ This program solves a Sudoku puzzle using the backtracking algorithm. It takes a
 ## Input Format
 
 The input is a 9x9 Sudoku puzzle provided in the following format. Each line contains 9 digits, where a `0` represents an empty cell that needs to be filled. Here is an example input:
+
+800000000
+003600000
+070090200
+050007000
+000045700
+000100030
+001000068
+008500010
+090000400
 800000000
 003600000
 070090200
@@ -37,3 +47,5 @@ The program uses the following functions to solve the Sudoku puzzle:
 
 - **`printBoard(int board[9][9])`**:
   - Prints the current state of the Sudoku grid in a readable format.
+
+ ![Example](https://github.com/robert-portilho/sudoku-solver/blob/main/sudoku_solver.png)
