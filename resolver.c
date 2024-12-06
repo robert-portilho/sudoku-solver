@@ -20,9 +20,12 @@ int main()
         }
     }
 
-    resolve(0,0,board);
-    printBoard(board);
-
+    if(resolve(0,0,board)) {
+        printBoard(board);
+    } else {
+        printf("There is no solution for this puzzle");
+    }
+    
     return 0;
 }
 
