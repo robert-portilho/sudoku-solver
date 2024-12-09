@@ -32,18 +32,18 @@ int main()
 bool check(int row, int col, int n, int board[9][9]){
 
     for(int i = 0; i < 9; i++) {
-        //check if the number already exists on the row
+        //check if the number already exists int the row
         if(board[row][i] == n) {
             return false;
         }
 
-        //check if the number already exists on the column
+        //check if the number already exists in the col
         if(board[i][col] == n) {
             return false;
         }
     }
 
-    //check if number already exists on the inner square 3x3 
+    //check if number already exists in the small grid 3x3
     int r = row - row % 3;
     int c = col - col % 3;
 
