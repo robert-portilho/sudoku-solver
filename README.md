@@ -37,7 +37,7 @@ The grid consists of numbers from `1` to `9` and `0` for empty cells. The progra
 
 The program uses the following functions to solve the Sudoku puzzle:
 
-- **`resolve(int row, int col, int board[9][9])`**:
+- **`solve(int row, int col, int board[9][9])`**:
   - Attempts to solve the Sudoku puzzle using recursion and backtracking.
   - It recursively tries filling in each empty cell and backtracks if a conflict is encountered.
 
