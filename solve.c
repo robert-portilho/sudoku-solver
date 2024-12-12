@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 
- bool resolve(int row, int col, int board[9][9]);
+ bool solve(int row, int col, int board[9][9]);
  bool check(int row, int col, int n, int board[9][9]);
  void printBoard(int board[9][9]);
 
@@ -20,7 +20,7 @@ int main()
         }
     }
 
-    if(resolve(0,0,board)) {
+    if(solve(0,0,board)) {
         printBoard(board);
     } else {
         printf("There is no solution for this puzzle");
@@ -60,7 +60,7 @@ bool check(int row, int col, int n, int board[9][9]){
     return true;
 }
 
-bool resolve(int row, int col, int board[9][9]) {
+bool solve(int row, int col, int board[9][9]) {
     
     //check if board is completed
     if(col == 9 && row == 8) return true;
@@ -72,7 +72,7 @@ bool resolve(int row, int col, int board[9][9]) {
     }
 
     //if current cell already has a solution, go to the next cell
-    if(board[row][col] != 0) return resolve(row, col + 1, board);
+    if(board[row][col] != 0) return solve(row, col + 1, board);
 
     //trying every possible number for current cell
     for( int n = 1; n <= 9; n++) {
@@ -80,7 +80,7 @@ bool resolve(int row, int col, int board[9][9]) {
             board[row][col] = n;
 
             //check recursively if current number solves the puzzle
-            if (resolve(row, col + 1, board)) return true;
+            if (solve(row, col + 1, board)) return true;
 
             board[row][col] = 0;
         }
